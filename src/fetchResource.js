@@ -95,10 +95,10 @@ async function toJSON(response) {
  * @param {object} options
  */
 export default async function fetchResource(url, options) {
-  if (hasAbortController()) {
-    options = addAbortController(options);
-  }
-  return fetch(url, options)
+  const fetchOptions = hasAbortController()
+    ? addAbortController(options)
+    : options;
+  return fetch(url, fetchOptions)
     .then((response) => toJSON(response))
     .catch((error) => mapNetworkError(error));
 }
