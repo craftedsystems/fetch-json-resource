@@ -1,5 +1,8 @@
 {
-  "author": "https://www.crafted.systems",
+  "author": {
+    "name": "Mario Pizzinini",
+    "url": "https://www.crafted.systems"
+  },
   "bugs": {
     "url": "https://github.com/craftedsystems/fetch-json-resource/issues"
   },
