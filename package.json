@@ -8,6 +8,7 @@
   },
   "description": "Fetch JSON resource with AbortController and (opinionated) error handling",
   "devDependencies": {
+    "ava": "^2.4.0",
     "microbundle": "^0.12.0-next.6"
   },
   "homepage": "https://github.com/craftedsystems/fetch-json-resource#readme",
@@ -26,7 +27,7 @@
   "scripts": {
     "build": "microbundle --compress --target web",
     "dev": "microbundle watch",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "ava"
   },
   "source": "src/fetchResource.js",
   "unpkg": "dist/fetchResource.umd.js",
