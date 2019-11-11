@@ -1,0 +1,31 @@
+{
+  "author": "https://www.crafted.systems",
+  "bugs": {
+    "url": "https://github.com/craftedsystems/fetch-json-resource/issues"
+  },
+  "description": "Fetch JSON resource with AbortController and (opinionated) error handling",
+  "devDependencies": {
+    "microbundle": "^0.12.0-next.6"
+  },
+  "homepage": "https://github.com/craftedsystems/fetch-json-resource#readme",
+  "keywords": [],
+  "license": "ISC",
+  "main": "dist/fetchResource.js",
+  "mangle": {
+    "regex": "^_"
+  },
+  "module": "dist/fetchResource.module.js",
+  "name": "fetch-json-resource",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/craftedsystems/fetch-json-resource.git"
+  },
+  "scripts": {
+    "build": "microbundle --compress --target web",
+    "dev": "microbundle watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "source": "src/fetchResource.js",
+  "unpkg": "dist/fetchResource.umd.js",
+  "version": "0.1.0"
+}
