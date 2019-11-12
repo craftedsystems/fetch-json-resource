@@ -11,6 +11,22 @@
 [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=craftedsystems_fetch-json-resource&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=craftedsystems_fetch-json-resource)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=craftedsystems_fetch-json-resource&metric=sqale_index)](https://sonarcloud.io/dashboard?id=craftedsystems_fetch-json-resource)
 
+## Usage
+
+```bash
+# Install
+npm i fetch-json-resource
+```
+
+```javascript
+import fetchResource from 'fetchResource';
+fetchResource('https://jsonplaceholder.typicode.com/todos/1')
+  .then(() => {})
+  .catch() {};
+```
+
+## Dev
+
 ```bash
 # Install
 npm i
