@@ -30,7 +30,7 @@
     "build": "microbundle src/index.mjs --compress --target web",
     "dev": "microbundle watch",
     "lint": "eslint src/**",
-    "test": "ava"
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "source": "src/fetchJsonResource.js",
   "umd:main": "dist/fetchJsonResource.umd.js",
