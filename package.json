@@ -8,7 +8,6 @@
   },
   "description": "Fetch JSON resource with AbortController and (opinionated) error handling",
   "devDependencies": {
-    "ava": "^2.4.0",
     "microbundle": "^0.12.0-next.6"
   },
   "homepage": "https://github.com/craftedsystems/fetch-json-resource#readme",
