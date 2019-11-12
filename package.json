@@ -8,27 +8,31 @@
   },
   "description": "Fetch JSON resource with AbortController and (opinionated) error handling",
   "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^6.6.0",
     "microbundle": "^0.12.0-next.6"
   },
   "homepage": "https://github.com/craftedsystems/fetch-json-resource#readme",
+  "jsnext:main": "dist/fetchJsonResource.mjs",
   "keywords": [],
   "license": "ISC",
-  "main": "dist/fetchResource.js",
+  "main": "dist/fetchJsonResource.js",
   "mangle": {
     "regex": "^_"
   },
-  "module": "dist/fetchResource.module.js",
+  "module": "dist/fetchJsonResource.mjs",
   "name": "fetch-json-resource",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/craftedsystems/fetch-json-resource.git"
   },
   "scripts": {
-    "build": "microbundle --compress --target web",
+    "build": "microbundle src/index.mjs --compress --target web",
     "dev": "microbundle watch",
+    "lint": "eslint src/**",
     "test": "ava"
   },
-  "source": "src/fetchResource.js",
-  "unpkg": "dist/fetchResource.umd.js",
-  "version": "0.1.0"
+  "source": "src/fetchJsonResource.js",
+  "umd:main": "dist/fetchJsonResource.umd.js",
+  "version": "0.2.0"
 }
