@@ -19,10 +19,11 @@ npm i fetch-json-resource
 ```
 
 ```javascript
-import fetchResource from 'fetchResource';
-fetchResource('https://jsonplaceholder.typicode.com/todos/1')
-  .then(() => {})
-  .catch() {};
+import fetchJsonResource from 'fetch-json-resource';
+
+fetchJsonResource('https://jsonplaceholder.typicode.com/todos/1')
+  .then((json) => console.log(json))
+  .catch((error) => console.log(error));
 ```
 
 ## Dev
