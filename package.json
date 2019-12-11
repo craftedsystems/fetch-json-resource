@@ -9,7 +9,7 @@
   "description": "Fetch JSON resource with AbortController and (opinionated) error handling",
   "devDependencies": {
     "babel-preset-env": "^1.7.0",
-    "eslint": "^6.6.0",
+    "eslint": "^6.7.2",
     "microbundle": "^0.12.0-next.6"
   },
   "homepage": "https://github.com/craftedsystems/fetch-json-resource#readme",
@@ -34,5 +34,5 @@
   },
   "source": "src/fetchJsonResource.js",
   "umd:main": "dist/fetchJsonResource.umd.js",
-  "version": "0.2.1"
+  "version": "0.2.2"
 }
