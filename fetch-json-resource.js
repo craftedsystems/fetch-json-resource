@@ -93,7 +93,7 @@ async function toJSON(response) {
  * @param {string} url
  * @param {object} options
  */
-export default async function fetchJsonResource(url, options) {
+export async function fetchJsonResource(url, options) {
   const fetchOptions = hasAbortController()
     ? addAbortController(options)
     : options;
