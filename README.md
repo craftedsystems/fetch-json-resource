@@ -27,7 +27,8 @@
 [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=craftedsystems_fetch-json-resource&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=craftedsystems_fetch-json-resource)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=craftedsystems_fetch-json-resource&metric=sqale_index)](https://sonarcloud.io/dashboard?id=craftedsystems_fetch-json-resource)
 
-Fetch JSON resource with AbortController and (opinionated) error handling.
+**Fetch JSON resource with AbortController and error handling.**  
+~600 bytes gzipped
 
 ## Usage
 
