@@ -3,6 +3,7 @@
     "name": "Mario Pizzinini",
     "url": "https://www.crafted.systems"
   },
+  "browser": "fetch-json-resource.js",
   "bugs": {
     "url": "https://github.com/craftedsystems/fetch-json-resource/issues"
   },
@@ -14,10 +15,12 @@
   "keywords": [
     "abortcontroller",
     "fetch",
+    "javascript",
     "json",
     "timeout"
   ],
   "license": "ISC",
+  "main": "fetch-json-resource.js",
   "name": "fetch-json-resource",
   "repository": {
     "type": "git",
@@ -27,6 +30,6 @@
     "lint": "eslint src/**",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "source": "src/index.mjs",
-  "version": "0.4.0"
+  "source": "fetch-json-resource.js",
+  "version": "0.5.0"
 }
