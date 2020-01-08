@@ -45,15 +45,30 @@ fetchJsonResource('https://jsonplaceholder.typicode.com/todos/1')
   .catch((error) => console.log(error));
 ```
 
+## Options
+
+You can add additional fetch options and/or a custom timeout value.
+
+```javascript
+import fetchJsonResource from 'fetch-json-resource';
+
+// Fetch options
+const options = {};
+
+// Abort after 5 seconds
+const timeout = 5000;
+
+fetchJsonResource('https://jsonplaceholder.typicode.com/todos/1', options, timeout)
+  .then((json) => console.log(json))
+  .catch((error) => console.log(error));
+```
+
 ## Dev
 
 ```bash
 # Install
 npm i
 
-# Dev
-npm run dev
-
-# Build
-npm run build
+# Lint
+npm run lint
 ```

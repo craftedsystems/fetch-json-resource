@@ -52,10 +52,10 @@ function hasAbortController() {
  * Use AbortController to be able to send abort signal to fetch and handle network timeouts.
  * @param {object} options
  */
-function addAbortController(options) {
+function addAbortController(options, timeout) {
   const controller = new AbortController();
   // Abort request after 10 sec
-  setTimeout(() => controller.abort(), 10000);
+  setTimeout(() => controller.abort(), timeout);
   return {
     ...options,
     signal: controller.signal,
@@ -92,10 +92,11 @@ async function toJSON(response) {
  * Fetch resource
  * @param {string} url
  * @param {object} options
+ * @param {number} timeout in milliseconds (default 10000)
  */
-export default async function fetchJsonResource(url, options) {
+export default async function fetchJsonResource(url, options, timeout = 10000) {
   const fetchOptions = hasAbortController()
-    ? addAbortController(options)
+    ? addAbortController(options, timeout)
     : options;
   return fetch(url, fetchOptions)
     .then((response) => toJSON(response))
