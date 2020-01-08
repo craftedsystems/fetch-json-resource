@@ -38,9 +38,9 @@ npm i fetch-json-resource
 ```
 
 ```javascript
-import fetchJsonResource from 'fetch-json-resource';
+import fetchJson from 'fetch-json-resource';
 
-fetchJsonResource('https://jsonplaceholder.typicode.com/todos/1')
+fetchJson('https://jsonplaceholder.typicode.com/todos/1')
   .then((json) => console.log(json))
   .catch((error) => console.log(error));
 ```

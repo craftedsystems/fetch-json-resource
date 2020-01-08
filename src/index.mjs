@@ -31,6 +31,7 @@ function mapNetworkError(error) {
 function hasAbortController() {
   const self = window && typeof window.self !== 'undefined'
     ? window.self
+    // @ts-ignore
     : global;
 
   // Note that the "unfetch" minimal fetch polyfill defines fetch() without
@@ -92,7 +93,7 @@ async function toJSON(response) {
  * @param {string} url
  * @param {object} options
  */
-export default async function fetchResource(url, options) {
+export default async function fetchJson(url, options) {
   const fetchOptions = hasAbortController()
     ? addAbortController(options)
     : options;
