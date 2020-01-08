@@ -7,19 +7,21 @@
 function mapNetworkError(error) {
   if (error && error.code === 20 && error.name === 'AbortError') {
     // Abort controller event
-    return {
+    error = {
       code: -1,
       id: 'network-timeout',
       message: 'Network timeout',
       type: 'app:network-timeout',
-    }
+    };
+  } else {
+    error = {
+      code: error.code || -1,
+      id: error.id || 'network-error',
+      message: error.message || 'unknown error',
+      type: error.type || 'app:unknown-error',
+    };
   }
-  return {
-    code: -1,
-    id: 'network-error',
-    message: error.message,
-    type: 'app:network-error',
-  }
+  return Promise.reject(error);
 }
 
 /**
@@ -75,17 +77,13 @@ function getLastErrorTypeSegment(type) {
 async function toJSON(response) {
   try {
     const json = await response.json();
-    if (json.code && typeof json.id === 'undefined') {
-      json.id = getLastErrorTypeSegment(json.type);
+    if (json.code) {
+      json.id = json.id || getLastErrorTypeSegment(json.type);
+      return Promise.reject(json);
     }
     return json;
-  } catch(err) {
-    return {
-      code: -1,
-      id: 'unknown',
-      message: err.message,
-      type: 'app:unknown',
-    };
+  } catch (error) {
+    return Promise.reject(error);
   }
 }
 
