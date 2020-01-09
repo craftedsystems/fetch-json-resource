@@ -10,9 +10,6 @@
   <a href="https://david-dm.org/craftedsystems/fetch-json-resource">
     <img src="https://david-dm.org/craftedsystems/fetch-json-resource/status.svg" alt="dependency status">
   </a>
-  <a href="https://david-dm.org/craftedsystems/fetch-json-resource">
-    <img src="https://david-dm.org/craftedsystems/fetch-json-resource/status.svg" alt="dependency status"/>
-  </a>
   <a href="https://david-dm.org/craftedsystems/fetch-json-resource?type=dev">
     <img src="https://david-dm.org/craftedsystems/fetch-json-resource/dev-status.svg" alt="devDependencies status">
   </a>
