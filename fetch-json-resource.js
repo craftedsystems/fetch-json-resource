@@ -94,7 +94,7 @@ async function toJSON(response) {
  * @param {object} options
  * @param {number} timeout in milliseconds (default 10000)
  */
-export default async function fetchJsonResource(url, options, timeout = 10000) {
+async function fetchJsonResource(url, options, timeout = 10000) {
   const fetchOptions = hasAbortController()
     ? addAbortController(options, timeout)
     : options;
@@ -102,3 +102,5 @@ export default async function fetchJsonResource(url, options, timeout = 10000) {
     .then((response) => toJSON(response))
     .catch((error) => mapNetworkError(error));
 }
+
+module.exports = fetchJsonResource;
