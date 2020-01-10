@@ -29,7 +29,7 @@ function mapNetworkError(error) {
  * base on https://github.com/mo/abortcontroller-polyfill/blob/f20480d50d642d65790ee1af80e54a71506bcd46/src/abortcontroller-polyfill.js
  */
 function hasAbortController() {
-  const self = window && typeof window.self !== 'undefined'
+  const self = typeof window !== 'undefined' && typeof window.self !== 'undefined'
     ? window.self
     // @ts-ignore
     : global;
