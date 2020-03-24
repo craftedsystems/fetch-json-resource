@@ -8,9 +8,6 @@
     "url": "https://github.com/craftedsystems/fetch-json-resource/issues"
   },
   "description": "Fetch JSON resource with AbortController and error handling",
-  "devDependencies": {
-    "eslint": "^6.8.0"
-  },
   "homepage": "https://github.com/craftedsystems/fetch-json-resource#readme",
   "keywords": [
     "abortcontroller",
@@ -27,9 +24,8 @@
     "url": "git+https://github.com/craftedsystems/fetch-json-resource.git"
   },
   "scripts": {
-    "lint": "eslint fetch-json-resource.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "source": "fetch-json-resource.js",
-  "version": "0.6.2"
+  "version": "0.6.3"
 }

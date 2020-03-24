@@ -24,8 +24,10 @@
 [![SonarCloud Vulnerabilities](https://sonarcloud.io/api/project_badges/measure?project=craftedsystems_fetch-json-resource&metric=vulnerabilities)](https://sonarcloud.io/component_measures/metric/security_rating/list?id=craftedsystems_fetch-json-resource)
 [![Technical Debt](https://sonarcloud.io/api/project_badges/measure?project=craftedsystems_fetch-json-resource&metric=sqale_index)](https://sonarcloud.io/dashboard?id=craftedsystems_fetch-json-resource)
 
-**Fetch JSON resource with AbortController and error handling.**  
-~600 bytes gzipped
+**Fetch JSON resource with AbortController and error handling.**
+
+* no dependencies
+* ~600 bytes gzipped
 
 ## Usage
 
@@ -58,14 +60,4 @@ const timeout = 5000;
 fetchJsonResource('https://jsonplaceholder.typicode.com/todos/1', options, timeout)
   .then((json) => console.log(json))
   .catch((error) => console.log(error));
-```
-
-## Dev
-
-```bash
-# Install
-npm i
-
-# Lint
-npm run lint
 ```
